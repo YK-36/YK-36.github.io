@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.container1{
+    display: inline-block;
+    width: 100%;
+    background: darkslategray;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    float: right;
+    position: relative;
+    margin-top: 20px;
+    margin-right: 2vw;
+}
+
+ul li a{
+    display: block;
+    padding: 20px, 25px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+ul li a:hover{
+    color: white;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropmenu {
+    display: none;
+    position: absolute;
+    background-color: darkslategray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropmenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropmenu {
+    display: block;
+}
+
+.cmenu{
+    color: rgb(31, 51, 68);
+}
+
+body {
+    background: rgb(5, 1, 15);
+    overflow-x: hidden;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.container1 img{
+    float: left;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+.container1 img:hover{
+    animation: transition 3s linear forwards;
+}
+
+.back img{
+    display: none;
+}
+
+.back video {
+    width: 100vw;
+    margin-bottom: 50px;
+}
+
+.container2 {
+    width: 94vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 3vw;
+}
+
+.card {
+    background: #549bb8;
+    width: 30vw;
+    padding: 3vw;
+    border-radius: 25px;
+    margin: 1vw;
+}
+
+.card img {
+    width: 24vw;
+    height: 16vw;
+    text-align: center;
+}
+
+.card img:hover{
+    opacity: 75%;
+}
+
+footer {
+    background: #000;
+    color: white;
+    padding: 10vw;
+}
+
+@keyframes transition {
+    25% {
+        opacity: 0;
+        background: darkslategray;
+        width: 50px;
+        height: 50px;
+    }
+
+    40% {
+        background: darkslategray;
+        opacity: 0;
+        width: 60px;
+        height: 50px;
+    }
+
+    75%{
+        background: darkslategray;
+        content: url("logo_transition.png");
+        width: 70px;
+        height: 50px;
+    }
+
+    100% {
+        background: transparent;
+        content: url("logo_transition.png");
+        width: 70px;
+        height: 50px;
+    }
+}
+
+@keyframes transition1 {
+    25% {
+        opacity: 0;
+        background: darkslategray;
+        width: 45px;
+        height: 45px;
+    }
+
+    40% {
+        background: darkslategray;
+        opacity: 0;
+        width: 67px;
+        height: 45px;
+    }
+
+    75%{
+        background: darkslategray;
+        content: url("logo_transition.png");
+        width: 66px;
+        height: 45px;
+    }
+
+    100% {
+        background: transparent;
+        content: url("logo_transition.png");
+        width: 66px;
+        height: 45px;
+    }
+}
+
+@keyframes transition2 {
+    25% {
+        opacity: 0;
+        background: darkslategray;
+        width: 40px;
+        height: 40px;
+    }
+
+    40% {
+        background: darkslategray;
+        opacity: 0;
+        width: 53px;
+        height: 40px;
+    }
+
+    75%{
+        background: darkslategray;
+        content: url("logo_transition.png");
+        width: 63px;
+        height: 40px;
+    }
+
+    100% {
+        background: transparent;
+        content: url("logo_transition.png");
+        width: 63px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    ul li a{
+        font-size: 15px;
+    }
+
+    .dropmenu {
+        min-width: 100px;
+    }
+    .container1 img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .container1 img:hover{
+        animation: transition1 3s linear forwards;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    ul li a{
+        font-size: 12px;
+    }
+
+    .dropmenu {
+        min-width: 80px;
+    }
+
+    .container1 img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .container1 img:hover{
+        animation: transition2 3s linear forwards;
+    }
+
+    .back video{
+        display: none;
+    }
+
+    .back img{
+        display: block;
+        width: 100vw;
+        height: 100%;
+    }
+}
